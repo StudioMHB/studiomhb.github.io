@@ -3,63 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Studio | Indie Game Devs</title>
+  <title>Studio MHB</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
   <header>
-    <div class="logo">Our Studio</div>
+    <div class="logo" onclick="location.reload()"> Studio MHB</div>
     <nav>
-      <a href="#about">About</a>
       <a href="#games">Games</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="https://www.youtube.com/@MillerHandbook"> 
+        <img src="Youtube.svg" alt="Youtube" style="width:25px;height:25px;"> </a>
   </header>
 
-  <section id="hero">
-    <h1>Welcome to Our Studio</h1>
-    <p>We craft immersive worlds and unforgettable gameplay.</p>
-    <a href="#games" class="btn">See Our Work</a>
-  </section>
+  <div class="video-container">
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="IHIHeaderVideo.mp4" type="video/mp4">
+  </video>
+  </div>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      We're an independent game studio focused on creating story-driven experiences.
-      Founded by passionate developers, our goal is to blend creativity, emotion, and gameplay innovation.
-    </p>
-  </section>
+  <div class="video-overlay">
+    <h1> IN HER IMAGE</h1>
+    <p> In Her Image is a horror game where you explore <br> uncover mysteries, solve puzzles, surive enemies</p>
+    <a href="https://store.steampowered.com/app/4053030/In_Her_Image/"> Wishlist Now! </a>
+    <br>
+    <a href="https://store.steampowered.com/app/4053030/In_Her_Image/"> 
+    <img src="Steam.svg" alt="Steam" style="width:45px;height:45px;"> </a>
+  </div>
 
   <section id="games">
     <h2>Our Games</h2>
     <div class="game-grid">
       <div class="game-card">
-        <img src="images/game1.jpg" alt="Game 1">
-        <h3>Game Title 1</h3>
-        <p>A short description of your first game. Mention the genre or vibe.</p>
+        <img src="library_hero.png" alt="In Her Image">
+        <h3>IN HER IMAGE</h3>
+        <p>A horror game. Explore, solve puzzles, uncover mysteires, survive. </p>
+        <a href="https://store.steampowered.com/app/4053030/In_Her_Image/">  
+            <img src="Steam.svg" alt="Steam" style="width:45px;height:45px;"> </a>
       </div>
+  </section>
 
-      <div class="game-card">
-        <img src="images/game2.jpg" alt="Game 2">
-        <h3>Game Title 2</h3>
-        <p>Another game — maybe upcoming or in development. Keep it intriguing.</p>
-      </div>
-    </div>
+    <section id="about">
+    <h2>About Us</h2>
+    <p>
+      We're are a new indie game studio called Studio MHB. We are a team of two developers. We value making original and creative content.
+      We make all of our assets by ourselves and don't use generative AI. Thank you for checking out our page. We hope you enjoy our game(s)!
+    </p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>For press or inquiries, reach out at:</p>
-    <a href="mailto:youremail@example.com" class="email-link">youremail@example.com</a>
-    <div class="socials">
-      <a href="#">Twitter</a>
-      <a href="#">Discord</a>
-      <a href="#">Steam</a>
-    </div>
+    <a href="mailto:studiomillr@gmail.com" class="email-link">studiomillr@gmail.com</a>
   </section>
 
   <footer>
-    <p>© <span id="year"></span> Our Studio. All rights reserved.</p>
+    <a href="https://www.youtube.com/@MillerHandbook"> 
+        <img src="Youtube.svg" alt="Youtube" style="width:25px;height:25px;"> </a>
+    <p>© <span id="year"></span> Studio MHB. All rights reserved.</p>
   </footer>
 
   <script>
