@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Studio | Indie Game Devs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Our Studio</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Welcome to Our Studio</h1>
+    <p>We craft immersive worlds and unforgettable gameplay.</p>
+    <a href="#games" class="btn">See Our Work</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      We're an independent game studio focused on creating story-driven experiences.
+      Founded by passionate developers, our goal is to blend creativity, emotion, and gameplay innovation.
+    </p>
+  </section>
+
+  <section id="games">
+    <h2>Our Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="images/game1.jpg" alt="Game 1">
+        <h3>Game Title 1</h3>
+        <p>A short description of your first game. Mention the genre or vibe.</p>
+      </div>
+
+      <div class="game-card">
+        <img src="images/game2.jpg" alt="Game 2">
+        <h3>Game Title 2</h3>
+        <p>Another game — maybe upcoming or in development. Keep it intriguing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For press or inquiries, reach out at:</p>
+    <a href="mailto:youremail@example.com" class="email-link">youremail@example.com</a>
+    <div class="socials">
+      <a href="#">Twitter</a>
+      <a href="#">Discord</a>
+      <a href="#">Steam</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Our Studio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Automatically updates the footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
