@@ -48,6 +48,11 @@ nav a:hover {
   color: #fff;
 }
 
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
 .video-container {
   position: relative;
   width: 100%;
