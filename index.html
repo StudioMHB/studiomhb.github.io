@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio MHB</title>
-  <link rel="stylesheet" href="style.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio MHB — Independent Game Studio</title>
+    <meta name="description" content="Studio MHB is a two-person indie game studio. Wishlist Gloam and In Her Image on Steam.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="logo" onclick="location.reload()"> Studio MHB</div>
-    <nav>
-      <a href="#games">Games</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="socials">
-    <a href="https://www.youtube.com/@MillerHandbook"> 
-        <img src="Youtube.svg" alt="Youtube" style="width:25px;height:25px;"> </a>
-    <a href="https://www.tiktok.com/@millerhandbook"> 
-        <img src="Tiktok.svg" alt="Tiktok" style="width:25px;height:25px;"> </a>
-    </div>
-  </header>
+<body id="top">
 
-  <div class="video-container">
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="IHIHeaderVideo.mp4" type="video/mp4">
-  </video>
-  </div>
+    <!-- Title card: Gloam -->
+    <section class="hero">
+        <video class="hero-media" autoplay loop muted playsinline>
+            <source src="GloamCapsuleAnimated.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <span class="eyebrow">Free demo on Steam</span>
+            <h1>Gloam</h1>
+            <p>A co-op FPS dungeon crawler. Dodge, parry and fight your way through procedurally generated dungeons with your friends.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://store.steampowered.com/app/4932360/Gloam/" target="_blank" rel="noopener">
+                    <img src="Steam.svg" alt=""> Wishlist on Steam
+                </a>
+                <a class="btn btn-ghost" href="gloam.html">Learn more</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#games">Scroll ↓</a>
+    </section>
 
-  <div class="video-overlay">
-    <h1> IN HER IMAGE</h1>
-    <p> In Her Image is a horror game where you explore <br> uncover mysteries, solve puzzles, surive enemies.</p>
-    <a href="https://store.steampowered.com/app/4053030/In_Her_Image/"> Wishlist Now! </a>
-    <br>
-    <a href="https://store.steampowered.com/app/4053030/In_Her_Image/"> 
-    <img src="Steam.svg" alt="Steam" style="width:45px;height:45px;"> </a>
-  </div>
+    <!-- Our Games -->
+    <section class="section" id="games">
+        <div class="wrap fade-in">
+            <h2 class="section-title">Our Games</h2>
+            <!-- Cards are filled in by site.js (edit the GAMES list there) -->
+            <div class="game-grid two" id="game-grid"></div>
+        </div>
+    </section>
 
-  <section id="games">
-    <h2>Our Games</h2>
-    <div class="game-grid">
-      <div class="game-card">
-        <img src="library_hero.png" alt="In Her Image">
-        <h3>IN HER IMAGE</h3>
-        <p>A horror game. Explore, solve puzzles, uncover mysteires, survive. </p>
-        <a href="https://store.steampowered.com/app/4053030/In_Her_Image/">  
-            <img src="Steam.svg" alt="Steam" style="width:45px;height:45px;"> </a>
-      </div>
+    <!-- About -->
+    <section class="section section-alt" id="about">
+        <div class="wrap studio-about fade-in">
+            <h2 class="section-title">About Us</h2>
+            <p>
+                Studio MHB is a new independent game studio made up of two developers. We value making original,
+                creative games, and we build every asset ourselves. No generative AI.
+            </p>
+            <p>
+                Thank you for checking out our page. We hope you enjoy our games!
+            </p>
+            <a class="more-link" href="about.html">Meet the team →</a>
+        </div>
+    </section>
 
-  </section>
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="wrap fade-in">
+            <h2 class="section-title">Contact</h2>
+            <p>For press, creators or business inquiries, reach out at:</p>
+            <a class="email-big" href="mailto:studiomillr@gmail.com">studiomillr@gmail.com</a>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      We're are a new indie game studio called Studio MHB. We are a team of two developers. We value making original and creative content.
-      We make all of our assets by ourselves and don't use generative AI. Thank you for checking out our page and we hope you enjoy our game(s)!
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>For press or inquiries, reach out at:</p>
-    <a href="mailto:studiomillr@gmail.com" class="email-link">studiomillr@gmail.com</a>
-  </section>
-
-  <footer>
-    <a href="https://www.youtube.com/@MillerHandbook"> 
-        <img src="Youtube.svg" alt="Youtube" style="width:25px;height:25px;"> </a>
-    <a href="https://www.tiktok.com/@millerhandbook"> 
-        <img src="Tiktok.svg" alt="Tiktok" style="width:25px;height:25px;"> </a>
-    <p>© <span id="year"></span> Studio MHB. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Automatically updates the footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script src="site.js"></script>
 </body>
 </html>
