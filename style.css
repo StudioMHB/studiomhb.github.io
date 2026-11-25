@@ -553,7 +553,12 @@ button.btn {
     .more-link:hover {
         border-color: var(--accent);
     }
-
+.download-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
 /* ---------- Header socials ---------- */
 
 .header-right {
