@@ -851,74 +851,155 @@ button.btn {
     margin-top: 1.5rem;
 }
 
-    .shot-grid a {
+.shot {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #000;
+}
+
+    .shot > a:first-child {
         display: block;
-        aspect-ratio: 16 / 9;
-        border-radius: var(--radius);
-        overflow: hidden;
-        background: #000;
+        width: 100%;
+        height: 100%;
     }
 
-    .shot-grid img {
+    .shot img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.4s ease;
     }
 
-    .shot-grid a:hover img {
+    .shot:hover img {
         transform: scale(1.04);
     }
 
-.asset-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* Download button that appears in the corner on hover */
+.dl-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+    .shot:hover .dl-btn,
+    .asset-card:hover .dl-btn,
+    .dl-btn:focus-visible {
+        opacity: 1;
+        transform: none;
+    }
+
+/* Phones/tablets can't hover, so always show it there */
+@media (hover: none) {
+    .dl-btn {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- Logos & art layout ---------- */
+
+.asset-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
-.asset-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--card);
-    border: 1px solid #2a2a2a;
-    border-radius: var(--radius);
-    overflow: hidden;
-    text-decoration: none;
-    transition: border-color 0.2s;
+.asset-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
 }
 
-    .asset-card:hover {
-        border-color: var(--accent);
+.asset-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+    /* The clickable tile — styled like the screenshots */
+    .asset-card > a:first-child {
+        display: block;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: #000;
+        text-decoration: none;
     }
+
+.asset-logo {
+    max-width: 520px;
+}
+
+.asset-rise {
+    max-width: 600px;
+}
 
 .asset-preview {
     aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.25rem;
-    background: #000;
 }
 
-    .asset-preview.light {
-        background: #f2f2f2;
+    .asset-preview img,
+    .asset-preview video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
     }
 
-    .asset-preview img {
-        max-height: 100%;
-        object-fit: contain;
-    }
+.asset-card:hover .asset-preview img,
+.asset-card:hover .asset-preview video {
+    transform: scale(1.04);
+}
+
+/* Logo (1280x300) and Rise (600x250) have transparent backgrounds,
+   so no black tile behind them — they sit on the page background */
+.asset-logo > a:first-child,
+.asset-rise > a:first-child {
+    background: transparent;
+}
+
+.asset-logo .asset-preview {
+    aspect-ratio: 1280 / 300;
+}
+
+.asset-rise .asset-preview {
+    aspect-ratio: 600 / 250;
+}
 
 .asset-card span {
-    padding: 0.8rem 1rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: var(--muted);
 }
 
 .asset-card small {
-    color: var(--muted);
     margin-left: 0.4rem;
+    opacity: 0.7;
 }
 
 /* ---------- Fade in ---------- */
@@ -1025,5 +1106,9 @@ button.btn {
 
     .factsheet {
         position: static;
+    }
+
+    .asset-pair {
+        grid-template-columns: 1fr;
     }
 }
