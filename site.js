@@ -9,7 +9,7 @@ const GAMES = [
     title: 'Gloam',
     page: 'gloam.html',
     img: 'GloamCapsule.jpg',
-    blurb: 'A co-op FPS dungeon crawler. Fight, loot and survive procedurally generated dungeons with friends.',
+    blurb: 'A co-op roguelite set in dark civil war era America. You and everything else in the land have been tainted rotten. Find redemption in vanquishing the embodiments of sin.',
     steam: 'https://store.steampowered.com/app/4932360/Gloam/',
     badge: 'Free demo',
     press: 'press-gloam.html'
@@ -19,7 +19,7 @@ const GAMES = [
     title: 'In Her Image',
     page: 'in-her-image.html',
     img: 'library_hero.png',
-    blurb: 'A horror game. Explore, solve puzzles, uncover mysteries and survive.',
+    blurb: 'A psychological horror game about descent through grief.',
     steam: 'https://store.steampowered.com/app/4053030/In_Her_Image/'
   }
 ];
